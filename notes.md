@@ -1,4 +1,4 @@
-# 
+# Overview
 This is from a Django Crash Course which can be found [here](https://www.youtube.com/watch?v=0roB7wZMLqI&ab_channel=freeCodeCamp.org).
 
 ## Create Env, Install Django, Run Env
@@ -28,13 +28,6 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
-## Creating sqlite3 Users
-To create a superuser:
-```sh
-python manage.py createsuperuser
-```
-After creating, users can be added via 127.0.0.1:8000/admin/auth/user/add when server is running.
-
 ## mysql database
 I've added a mysql server in `docker-compose.yml` to run locally.
 ### Connect to DB
@@ -45,3 +38,10 @@ mysql -h 127.0.0.1 -P 3306 -u root -p
 ```sh
 pipenv install mysqlclient
 ```
+
+## Creating Users (works with any database type)
+To create a superuser:
+```sh
+python manage.py createsuperuser
+```
+After creating, users can be added via 127.0.0.1:8000/admin/auth/user/add when server is running.
